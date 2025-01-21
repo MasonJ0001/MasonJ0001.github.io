@@ -1,0 +1,38 @@
+body{
+    background-color: #3b3b3b;
+    margin: 0px;
+    padding: opx;
+}
+h1{
+    margin: opx;
+    background-color: #3b3b3b;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50vw;
+}
+#mainParagraph{
+    margin: opx;
+    background-color: black;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 27vw;
+}
+img{
+    width: 100px;
+}
+#subParagraph{
+    margin: opx;
+    color: black;
+    background-color: #3b3b3b;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50vw;
+}

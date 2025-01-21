@@ -1,0 +1,5 @@
+How to push changes to my repository:
+
+git add -A
+git commit -m "some message"
+git push origin main
