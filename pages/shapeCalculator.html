@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/portfolio.css">
+    <script src="../scripts/portfolio.js"></script>
+    <title>Shape Calculator</title>
+</head>
+    <body id="shapeCalculatorBody">
+        <h1>Circle Area, Circumference, and Volume Calculator</h1>
+        <h2>Circle Area and Circumference</h2>
+        <img src="../images/CircleAreaPerimeter.jpg" alt="Circle Area and Circumference Image" class="mathImages">
+        <p>Radius(r) <input type="text" id="radius1"></p>
+        <button onclick="circumference()">Circumference</button>
+        <button onclick="area()">Area</button>
+        <p>Circumference: <span id="circumferenceResult"></span></p>
+        <p>Area: <span id="areaResult"></span></p>
+
+        <br>
+
+        <h2>Sphere Volume</h2>
+        <img src="../images/SphereVolume.png" alt="Sphere Volume Image" class="mathImages">
+        <p>Radius(r) <input type="text" id="radius2"></p>
+        <button onclick="volume()">Volume</button>
+        <p>Volume: <span id="volumeResult"></span></p>
+        
+        <br>
+
+        <a href="../index.html">Home</a>
+    </body>
+</html>

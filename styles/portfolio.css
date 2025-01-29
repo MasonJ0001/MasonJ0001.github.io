@@ -1,3 +1,4 @@
+/* Main Page */
 body{
     background-color: #3b3b3b;
     margin: 0px;
@@ -35,4 +36,17 @@ img{
     margin-left: auto;
     margin-right: auto;
     width: 50vw;
+}
+a {
+    color: lightgoldenrodyellow;
+}
+
+/* Shape Calculator */
+.mathImages{
+    width: 500px;
+}
+#shapeCalculatorBody{
+    color: white;
+    margin-left: 20px;
+    margin-bottom: 50px;
 }
