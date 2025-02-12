@@ -1,0 +1,24 @@
+body{
+    background-color: #3b3b3b;
+    margin: 0 px;
+    padding: 0 px;
+}
+h1{
+    margin: 0 px;
+    background-color: #3b3b3b;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50vw;
+}
+.mathImages{
+    width: 500px;
+}
+#shapeCalculatorBody{
+    color: white;
+    margin-left: 20px;
+    margin-bottom: 50px;
+}
+a {
+    color: lightgoldenrodyellow;
+}
