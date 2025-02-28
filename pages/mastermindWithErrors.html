@@ -91,10 +91,13 @@
 					if (slot > 6 || slot < 1) {
 						throw new RuleError("Inputs must be a number 1-6.");
 					}
-					else if (isNaN(slot)) {
+					else if (slot <= 6 && slot >= 1) {
+						return true;
+					}
+					else {
 						throw new RuleError("Inputs must be numbers.");
 					}
-					return true;
+				
 				}
 				catch (error) {
 					alert(error.name + error.message);
