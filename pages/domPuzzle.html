@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM Puzzle</title>
+        <style>
+            /* NOTE: Do NOT modify this stylesheet */
+            #puzzle { 
+                width: 500px; 
+                height: 500px; 
+                border: 5px solid black;
+            }
+        </style>
+
+    </head>
+    <body>
+
+        <!-- NOTE: Do NOT modify the body or div -->
+
+        <div id='puzzle'></div>
+
+        <script>
+        // All puzzle code must be implemented here
+        function mainTable() {
+            const title = document.createElement('h1');
+            title.innerHTML = "DOM Puzzle";
+            const puzzle = document.getElementById('puzzle');
+            puzzle.parentNode.insertBefore(title, puzzle);
+
+            document.getElementById('puzzle').style.height = '535px';
+            document.getElementById('puzzle').style.width = '510px';
+            document.getElementById('puzzle').style.backgroundColor = '#7338A0';
+            document.getElementById('puzzle').style.margin = "0";
+            document.getElementById('puzzle').addEventListener('mouseenter', ()=> { 
+                document.getElementById('puzzle').style.border = "5px solid orange";
+            });
+            document.getElementById('puzzle').addEventListener('mouseleave', ()=> { 
+                document.getElementById('puzzle').style.border = "5px solid black";
+            });
+            
+            
+            const table = document.createElement('table');
+            table.style.borderSpacing = "0";
+
+            for (let row = 0; row < 2; row++) {
+                const tr = document.createElement('tr');
+                for (let col = 0; col < 2; col++) {
+                    const td = document.createElement('td');
+                    td.style.height = "250px";
+                    td.style.width = "250px";
+                    td.style.margin = "0";
+                    tr.appendChild(td);
+                }
+                tr.style.margin = "0";
+                table.appendChild(tr);
+            }
+
+            
+            puzzle.appendChild(table);
+
+            topLeft();
+
+            bottomRight();
+
+            const footNote = document.createElement('p');
+            footNote.innerHTML = "This is a puzzle created entirely with JavaScript.";
+            puzzle.parentNode.appendChild(footNote);
+            
+        }
+
+        function topLeft() {
+            const puzzle = document.getElementById('puzzle').firstElementChild;
+            const buttons = puzzle.firstElementChild.firstElementChild
+
+            const table = document.createElement('table');
+            table.style.borderSpacing = "0";
+
+            for (let row = 0; row < 2; row++) {
+                const tr = document.createElement('tr');
+                for (let col = 0; col < 2; col++) {
+                    const td = document.createElement('td');
+                    td.style.height = "125px";
+                    td.style.width = "125px";
+                    td.style.margin = "0";
+                    // td.style.border = "1px solid black";
+                    tr.appendChild(td);
+                }
+                tr.style.margin = "0";
+                table.appendChild(tr);
+            }
+
+            for (let row = 0; row < 2; row++) {
+                let buttonPlace = table.children[row];
+                for (let col = 0; col < 2; col++) {
+                    const button = document.createElement('button');
+                    button.style.height = "125px";
+                    button.style.width = "125px";
+                    button.style.margin = "0";
+                    button.style.border = "3px solid black";
+                    button.style.borderSpacing = "0";
+                    
+                    buttonPlace.children[col].appendChild(button);
+                }
+            }
+
+            // Button A
+            table.children[0].children[0].children[0].style.backgroundColor = "#9455F4";
+            table.children[0].children[0].children[0].style.color = "white";
+            table.children[0].children[0].children[0].innerHTML = "A";
+
+            // Button B
+            table.children[0].children[1].children[0].style.backgroundColor = "#4A2B74";
+            table.children[0].children[1].children[0].style.color = "white";
+            table.children[0].children[1].children[0].innerHTML = "B";
+
+            // Button C
+            table.children[1].children[0].children[0].style.backgroundColor = "#594492";
+            table.children[1].children[0].children[0].style.color = "white";
+            table.children[1].children[0].children[0].innerHTML = "C";
+
+            // Button D
+            table.children[1].children[1].children[0].style.backgroundColor = "#854DDC";
+            table.children[1].children[1].children[0].style.color = "white";
+            table.children[1].children[1].children[0].innerHTML = "D";
+
+            buttons.appendChild(table);
+
+        }
+
+        function bottomRight() {
+            const puzzle = document.getElementById('puzzle').firstElementChild;
+            const buttons = puzzle.children[1].children[1]
+
+            // buttons.style.backgroundColor = "green";
+
+            const table = document.createElement('table');
+            table.style.borderSpacing = "0";
+
+            for (let row = 0; row < 10; row++) {
+                const tr = document.createElement('tr');
+                for (let col = 0; col < 10; col++) {
+                    const td = document.createElement('td');
+                    td.style.height = "24px";
+                    td.style.width = "25px";
+                    td.style.margin = "0";
+                    td.style.border = "1px solid black";
+                    td.style.backgroundColor = "#C39CFE";
+                    td.setAttribute('onclick', 'buttonColor(this)');
+                    tr.appendChild(td);
+                }
+                tr.style.margin = "0";
+                table.appendChild(tr);
+            }
+            buttons.appendChild(table);
+        }
+
+        function buttonColor(element) {
+            let buttonColor = [];
+
+            // button clicked
+            buttonColor.push(element);
+
+            // button to the left
+            buttonColor.push(element.previousElementSibling);
+
+            // button to the right
+            buttonColor.push(element.nextElementSibling);
+
+            buttonColor[0].style.backgroundColor = "#4A2574";
+
+            if (buttonColor[1] !== null ){
+                buttonColor[1].style.backgroundColor = "#FF9E00";
+            }
+                
+            
+            if (buttonColor[2] !== null ){
+                buttonColor[2].style.backgroundColor = "#FF9E00";
+            }
+        }
+
+        mainTable();
+
+        </script>
+    </body>
+</html>
