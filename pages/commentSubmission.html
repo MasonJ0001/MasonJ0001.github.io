@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Submission</title>
+    <style>
+        textarea {
+            width: 200px;
+            height: 500px;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>Comment Submissions</h1>
+
+    <form id="loginForm" action="" method="post" onsubmit="sanitize(event)">
+        <!-- Username -->
+        <h3>Login</h3>
+        <label for="username">Username</label>
+        <input 
+            id="username"
+            name="user"
+            type="username"
+            autocomplete="username"
+			pattern="[a-zA-Z0-9_]{2,10}"
+        >
+        <br>
+        <p id="userProblems"></p>
+
+        <!-- Password -->
+        <label for="password">Password</label>
+        <input 
+            id="password"
+            name="userpass"
+            type="password"
+        >
+        <br>
+        <p id="passProblems"></p>
+
+
+
+        <h2>Enter Your Information</h2>
+
+        <!-- Name -->
+        <label for="name">Name:</label>
+        <input 
+            id="name" 
+            name="name"
+            type="text"
+            pattern="[a-zA-Z ]{1,100}"
+            title="Letters Only"
+            placeholder="John Smith"
+        >
+        <br><br>
+
+        <!-- Phone Number -->
+        <label for="phone">Phone Number:</label>
+        <input 
+            id="phone"
+            name="phone"
+            type="tel"
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            title="Ten Numbers"
+            placeholder="000-000-0000"
+        >
+        <br><br>
+
+        <!-- Email -->
+        <label for="email">Email:</label>
+		<input 
+			id="email" 
+			name="useremail"
+			type="email"
+			autocomplete="email"
+            placeholder="cheese@cheesemail.com"
+		>
+		<br>
+        <button type="submit">Sign Up</button>
+        <br>
+
+        <h2>Comments</h2>
+        <textarea name="commentSection" id="comments"></textarea>
+    </form>
+    
+
+    
+    
+    <script src="../scripts/commentSubmit.js"></script>
+</body>
+</html>
