@@ -86,7 +86,7 @@ function loaded() {
         
     getQuote();
 
-    //localStorage.clear();
+    // localStorage.clear();
 }
 
 let increment = 0;
