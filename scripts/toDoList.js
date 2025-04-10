@@ -15,6 +15,8 @@ function displayListItem(event) {
 
     let newItem = document.createElement("p");
     newItem.innerHTML = escapeHTML(userInput);
+    console.log(newItem);
+    console.log(listDiv);
     listDiv.appendChild(newItem);
     Object.defineProperty(list, "item" + j, {configurable:true});
     Object.defineProperty(list, "item" + j, {enumerable:true});
@@ -136,3 +138,6 @@ function light() {
     document.getElementById('list').style.color = "black";
     document.getElementById('mode').style.color = "black";
 }
+
+let listDiv = document.getElementById("list");
+console.log(listDiv);
